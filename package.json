@@ -1,0 +1,23 @@
+{
+  "name": "WordPress-Theme",
+  "version": "1.0.0",
+  "description": "Simple WordPress theme",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass styles/scss/index.scss styles/index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amegahy/WordPress-Theme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amegahy/WordPress-Theme/issues"
+  },
+  "homepage": "https://github.com/Amegahy/WordPress-Theme#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta3"
+  }
+}

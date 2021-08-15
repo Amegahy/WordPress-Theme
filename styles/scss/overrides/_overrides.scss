@@ -1,0 +1,14 @@
+/* 
+*   Description: All overridden classes from thirdparty styles
+*/
+
+.navbar {
+    a {
+        color: $nav-bar-color;
+
+        &:hover {
+            color: $nav-bar-color-hover;
+            text-decoration: underline;
+        }
+    }
+}

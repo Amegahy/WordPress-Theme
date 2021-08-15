@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <?php wp_head();?>
 </head>
-<body <?php body_class();?>>
-<?php wp_nav_menu(
-    array(
-        'theme_location' => 'top-menu',
-        'menu_class' => 'navbar navbar-light bg-dark',
-    )
-)?>
-<div class="container">
+<body>
+    <header>
+        <div class="container">
+        <?php wp_nav_menu(
+            array(
+                'theme_location' => 'top-menu',
+                'menu_class' => 'navbar',
+            )
+        )?>
+        </div>
+    </header>
+<div class="container py-5">

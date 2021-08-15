@@ -1,0 +1,19 @@
+/*
+*   Description: Navigation bar styling
+*/
+
+.navbar {
+
+    // Nav bar dropdown 
+    .menu-item-has-children {
+        .sub-menu {
+            background-color: $nav-bar-bg;
+            margin-top: 50px;
+            padding: 0;
+
+            .menu-item {
+                border: 2px solid black;
+            }
+        }
+    }
+}

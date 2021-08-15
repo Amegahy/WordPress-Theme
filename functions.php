@@ -2,7 +2,7 @@
 
 function load_stylesheets(){
     /* Format ('name of stylesheet', URL of the file, array(dependent stylesheets), version number, 'medai screen to work on) */
-    wp_register_style('stylesheet', get_template_directory_uri().'/css/bootstrap.min.css', array(), false, 'all');
+    wp_register_style('stylesheet', get_template_directory_uri().'/styles/index.css', array(), false, 'all');
     wp_enqueue_style('stylesheet');
 }
 
@@ -13,7 +13,7 @@ function loadjs(){
 }
 
 add_action('wp_enqueue_scripts', 'load_stylesheets');
-add_action('wp_enqueue_scripts', 'loadjs');
+// add_action('wp_enqueue_scripts', 'loadjs');
 
 add_theme_support('menus');
 add_theme_support('post-thumbnails');

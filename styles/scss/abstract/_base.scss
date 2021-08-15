@@ -1,0 +1,51 @@
+/*
+*   Description: All default tag styles
+*/
+
+body {
+    background-color: $body-BG;
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    h1,
+    h2,
+    h3 {
+        @extend .my-2;
+        color: $body-color;
+        font-family: $heading-font;
+    }
+
+    a,
+    p,
+    li {
+        color: $body-color;
+        font-family: $body-font;
+        font-size: $font-size-md;
+    }
+
+    h1 {
+        font-size: $font-size-xl;
+    }
+
+    h2 {
+        font-size: $font-size-lg;
+    }
+
+    h3 {
+        font-size: $font-size-md;
+    }
+
+    header {
+        background-color: $nav-bar-bg;
+    }
+}
