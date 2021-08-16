@@ -8,12 +8,14 @@ function load_stylesheets(){
 
 function loadjs(){
     /* Format ('name of script', URL of the file, array(dependent scripts), version number, 'in footer) */
-    wp_register_style('customjs', get_template_directory_uri().'/js/bootstrap.min.js', '', '1', false);
-    wp_enqueue_style('customjs');
+    wp_register_script('jQuery', get_template_directory_uri().'/node_modules/jquery/dist/jquery.min.js";', '', '1', false);
+    wp_register_script('customjs', get_template_directory_uri().'/js/index.js";', '', '1', false);
+    wp_enqueue_script('jQuery');
+    wp_enqueue_script('customjs');    
 }
 
 add_action('wp_enqueue_scripts', 'load_stylesheets');
-// add_action('wp_enqueue_scripts', 'loadjs');
+add_action('wp_enqueue_scripts', 'loadjs');
 
 add_theme_support('menus');
 add_theme_support('post-thumbnails');

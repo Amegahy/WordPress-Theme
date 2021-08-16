@@ -19,7 +19,12 @@ $heading-font: 'Roboto Bold';
 $body-font: 'Roboto Regular';
 
 // Media screens
-$mobile: 768px;
+$tablet: 540px;
+
+// Icons
+$dropdown-icon: './scss/vendor/icons/dropdown-icon.svg;';
+$hamburger-icon: './scss/vendor/icons/hamburger-icon.svg;';
+$close-icon: './scss/vendor/icons/close-icon.svg;';
 
 // Border radius
 $round-radius: 30px;
@@ -28,6 +33,7 @@ $round-radius: 30px;
 $nav-bar-bg: $navy;
 $nav-bar-color: $white;
 $nav-bar-color-hover: $white;
+$nav-bar-mobile-border: 1px solid $white;
 
 // Footer
 $footer-bg: $black;

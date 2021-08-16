@@ -40,6 +40,8 @@ body {
     font-size: 1rem; }
   body header {
     background-color: #231c86; }
+  body .hidden {
+    display: none !important; }
 
 /*
 *   Description: Typography definitions
@@ -64,12 +66,83 @@ body {
 /*
 *   Description: Navigation bar styling
 */
-.navbar .menu-item-has-children .sub-menu {
+.navbar-container {
   background-color: #231c86;
-  margin-top: 50px;
+  height: 100%;
   padding: 0; }
-  .navbar .menu-item-has-children .sub-menu .menu-item {
-    border: 2px solid black; }
+  .navbar-container .mobile-nav-toggler-container {
+    display: flex;
+    flex-direction: row-reverse; }
+    .navbar-container .mobile-nav-toggler-container .mobile-nav-toggler {
+      background-image: url("./scss/vendor/icons/hamburger-icon.svg;");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 20px;
+      width: 20px; }
+    .navbar-container .mobile-nav-toggler-container .toggler-open {
+      background-image: url("./scss/vendor/icons/close-icon.svg;"); }
+    @media only screen and (min-width: 540px) {
+      .navbar-container .mobile-nav-toggler-container {
+        display: none; } }
+  @media only screen and (min-width: 540px) {
+    .navbar-container {
+      display: flex; } }
+  .navbar-container .navbar {
+    display: block;
+    padding: 0; }
+    @media only screen and (min-width: 540px) {
+      .navbar-container .navbar.hidden {
+        display: flex !important;
+        margin: 0;
+        width: 100%; } }
+    .navbar-container .navbar .menu-item {
+      border-top: 1px solid #ffffff;
+      position: relative; }
+      .navbar-container .navbar .menu-item a {
+        padding-left: 1em; }
+        @media only screen and (min-width: 540px) {
+          .navbar-container .navbar .menu-item a {
+            padding-left: 0; } }
+      @media only screen and (min-width: 540px) {
+        .navbar-container .navbar .menu-item {
+          border-top: 0;
+          margin-left: 0.5em; }
+          .navbar-container .navbar .menu-item:first-of-type {
+            margin-left: 0; } }
+    .navbar-container .navbar .menu-item-has-children {
+      position: relative; }
+      .navbar-container .navbar .menu-item-has-children .sub-menu {
+        background-color: #231c86;
+        padding: 0;
+        padding-left: 1em; }
+        .navbar-container .navbar .menu-item-has-children .sub-menu .menu-item:first-of-type {
+          border-top: none;
+          padding-bottom: 0; }
+        @media only screen and (min-width: 540px) {
+          .navbar-container .navbar .menu-item-has-children .sub-menu {
+            margin-top: 3px;
+            max-width: 150px;
+            padding: 0 1em;
+            position: absolute;
+            width: max-content; } }
+      .navbar-container .navbar .menu-item-has-children::before {
+        content: url("./scss/vendor/icons/dropdown-icon.svg;");
+        display: block;
+        height: 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 20px; }
+        @media only screen and (min-width: 540px) {
+          .navbar-container .navbar .menu-item-has-children::before {
+            display: none; } }
+      @media only screen and (min-width: 540px) {
+        .navbar-container .navbar .menu-item-has-children:hover .sub-menu.hidden {
+          display: block !important; } }
+    .navbar-container .navbar .opened-dropdown::before {
+      top: 15px;
+      transform: rotateX(180deg); }
 
 /*!
  * Bootstrap v5.0.0-beta3 (https://getbootstrap.com/)
@@ -5530,11 +5603,11 @@ body h3, body .h3 {
   padding-top: 0 !important;
   padding-bottom: 0 !important; }
 
-.py-1 {
+.py-1, .navbar-container .navbar .menu-item {
   padding-top: 0.25rem !important;
   padding-bottom: 0.25rem !important; }
 
-.py-2 {
+.py-2, .navbar-container .mobile-nav-toggler-container {
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important; }
 

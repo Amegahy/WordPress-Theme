@@ -8,13 +8,25 @@
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container navbar-container p-0">
+            <div class="mobile-nav-toggler-container">
+                <span class="mobile-nav-toggler"></span>
+            </div>
         <?php wp_nav_menu(
             array(
                 'theme_location' => 'top-menu',
-                'menu_class' => 'navbar',
+                'menu_class' => 'navbar hidden',
+                'walker' => new Sub_Menu_Walker()
             )
-        )?>
+            );
+            
+            class Sub_Menu_Walker extends Walker_Nav_Menu {
+                function start_lvl(&$output, $depth) {
+                  $indent = str_repeat("\t", $depth);
+                  $output .= "\n$indent<ul class=\"sub-menu hidden\">\n";
+                }
+            }
+        ?>
         </div>
     </header>
 <div class="container py-5">

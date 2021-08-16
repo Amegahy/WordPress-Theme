@@ -48,4 +48,8 @@ body {
     header {
         background-color: $nav-bar-bg;
     }
+
+    .hidden {
+        display: none !important;
+    }
 }

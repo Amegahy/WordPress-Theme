@@ -2,18 +2,124 @@
 *   Description: Navigation bar styling
 */
 
-.navbar {
+.navbar-container {
+    background-color: $nav-bar-bg;
+    height: 100%;
+    padding: 0;
 
-    // Nav bar dropdown 
-    .menu-item-has-children {
-        .sub-menu {
-            background-color: $nav-bar-bg;
-            margin-top: 50px;
-            padding: 0;
+    .mobile-nav-toggler-container {
+        @extend .py-2;
 
-            .menu-item {
-                border: 2px solid black;
+        display: flex;
+        flex-direction: row-reverse;
+
+        .mobile-nav-toggler {
+            background-image: url($hamburger-icon);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 20px;
+            width: 20px;
+        }
+
+        .toggler-open {
+            background-image: url($close-icon);
+        }
+
+        @media only screen and (min-width: $tablet) {
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width: $tablet) {
+        display: flex;
+    }
+
+    .navbar {
+        display: block;
+        padding: 0;
+
+        @media only screen and (min-width: $tablet) {
+            &.hidden {
+                display: flex !important;
+                margin: 0;
+                width: 100%;
             }
+        }
+    
+        .menu-item {
+            @extend .py-1;
+
+            border-top: $nav-bar-mobile-border;
+            position: relative;
+
+            a {
+                padding-left: 1em;
+                
+                @media only screen and (min-width: $tablet) {
+                    padding-left: 0;
+                }
+            }
+
+            @media only screen and (min-width: $tablet) {
+                border-top: 0;
+                margin-left: 1em;
+
+                &:first-of-type {
+                    margin-left: 0;
+                }
+            }
+        }
+    
+        // Nav bar dropdown 
+        .menu-item-has-children {
+            position: relative;
+
+            .sub-menu {
+                background-color: $nav-bar-bg;
+                padding: 0;
+                padding-left: 1em;
+                
+                .menu-item:first-of-type {
+                    border-top: none;
+                    padding-bottom: 0;
+                }
+
+                @media only screen and (min-width: $tablet) {
+                    margin-top: 3px;
+                    max-width: 150px;
+                    padding: 0 1em;
+                    position: absolute;
+                    width: max-content;
+                }
+            }
+
+            &::before {
+                content: url($dropdown-icon);
+                display: block;
+                height: 20px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 20px;
+
+                @media only screen and (min-width: $tablet) {
+                    display: none;
+                }
+            }
+
+            @media only screen and (min-width: $tablet) {
+                &:hover {
+                    .sub-menu.hidden {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+
+        .opened-dropdown::before {
+            top: 15px;
+            transform: rotateX(180deg);
         }
     }
 }
