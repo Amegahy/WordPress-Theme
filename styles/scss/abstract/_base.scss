@@ -13,16 +13,16 @@ body {
         text-decoration: none;
     }
 
-    h1 {
-        text-align: center;
-    }
-
     h1,
     h2,
     h3 {
-        @extend .my-2;
         color: $body-color;
         font-family: $heading-font;
+    }
+    
+    h2,
+    h3 {
+        @extend .my-2;
     }
 
     a,
@@ -33,7 +33,10 @@ body {
         font-size: $font-size-md;
     }
 
-    h1 {
+    h1,
+    blockquote p {
+        @extend .my-3;
+
         font-size: $font-size-xl;
     }
 

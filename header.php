@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <div class="container navbar-container p-0">
+        <div class="container navbar-container p-0 py-1">
             <div class="mobile-nav-toggler-container">
                 <span class="mobile-nav-toggler"></span>
             </div>

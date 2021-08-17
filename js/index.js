@@ -4,6 +4,7 @@ $(function(){
     $( ".mobile-nav-toggler" ).click(function() {
         $(".mobile-nav-toggler").toggleClass("toggler-open");
         $(".navbar").toggleClass("hidden");
+        $(".navbar-container").toggleClass("position-fixed");  
     })
 
     // Toggle sub menu

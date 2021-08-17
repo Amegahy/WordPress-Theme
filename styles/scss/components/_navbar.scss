@@ -53,7 +53,7 @@
 
             a {
                 font-family: $heading-font;
-                font-size: $font-size-md;
+                font-size: $font-size-lg;
                 padding-left: 1em;
 
                 &:hover {
@@ -68,6 +68,11 @@
 
             @media only screen and (min-width: $tablet) {
                 border-top: 0;
+                margin-left: 1em;
+
+                &:first-of-type {
+                    margin-left: 0;
+                }
             }
         }
     
@@ -80,9 +85,17 @@
                 padding: 0;
                 padding-left: 1em;
                 
-                .menu-item:first-of-type {
-                    border-top: none;
-                    padding-bottom: 0;
+                .menu-item {
+                    margin-left: 0;
+                    
+                    a {
+                        font-size: $font-size-md;
+                    }
+
+                    &:first-of-type {
+                        border-top: none;
+                        padding-bottom: 0;
+                    }
                 }
 
                 @media only screen and (min-width: $tablet) {
@@ -93,6 +106,10 @@
                     padding: 0 1em;
                     position: absolute;
                     width: max-content;
+                }
+
+                &:hover {
+                    display: block !important;
                 }
             }
 

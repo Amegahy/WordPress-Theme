@@ -6,12 +6,12 @@
 $white: #ffffff;
 $black: #000000;
 $grey: #333333;
-$navy: #231c86;
+$navy: #303f9f;
 $body-BG: $white;
 $body-color: $black;
 
 // Font sizes
-$font-size-xl: 2.5rem; 
+$font-size-xl: 3rem; 
 $font-size-lg: 1.5rem; 
 $font-size-md: 1rem; 
 $font-size-sm: .8rem; 
@@ -23,9 +23,9 @@ $body-font: 'Roboto Regular';
 $tablet: 540px;
 
 // Icons
-$dropdown-icon: './scss/vendor/icons/dropdown-icon.svg;';
-$hamburger-icon: './scss/vendor/icons/hamburger-icon.svg;';
-$close-icon: './scss/vendor/icons/close-icon.svg;';
+$dropdown-icon: './styles/scss/vendor/icons/dropdown-icon.svg;';
+$hamburger-icon: './styles/scss/vendor/icons/hamburger-icon.svg;';
+$close-icon: './styles/scss/vendor/icons/close-icon.svg;';
 
 // Border radius
 $round-radius: 30px;

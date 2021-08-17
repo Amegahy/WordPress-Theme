@@ -2,6 +2,7 @@
 *   Description: All overridden classes from thirdparty styles
 */
 
+/* Bootstrap nav bar */
 .navbar {
     a {
         color: $nav-bar-color;
@@ -10,5 +11,18 @@
             color: $nav-bar-color-hover;
             text-decoration: underline;
         }
+    }
+}
+
+/* Wordpress image */
+figure.wp-block-image {
+    margin: auto;
+    max-height: 500px;
+    max-width: 500px;
+
+    img {
+        display: block;
+        height: 100%;
+        width: 100%;
     }
 }
