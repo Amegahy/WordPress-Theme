@@ -16,7 +16,8 @@
             array(
                 'theme_location' => 'top-menu',
                 'menu_class' => 'navbar hidden',
-                'walker' => new Sub_Menu_Walker()
+                'walker' => new Sub_Menu_Walker(),
+                'depth' => 2
             )
             );
             
@@ -29,4 +30,4 @@
         ?>
         </div>
     </header>
-<div class="container py-5">
+<div class="container min-vh-100 py-5">

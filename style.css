@@ -48,11 +48,11 @@ body {
 */
 @font-face {
   font-family: 'Roboto Bold';
-  src: url("../styles/scss/vendor/fonts/Roboto-Bold.ttf") format("truetype"); }
+  src: url("./styles/scss/vendor/fonts/Roboto-Bold.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'Roboto Regular';
-  src: url("../styles/scss/vendor/fonts/Roboto-Regular.ttf") format("truetype"); }
+  src: url("./styles/scss/vendor/fonts/Roboto-Regular.ttf") format("truetype"); }
 
 /* 
 *   Description: All overridden classes from thirdparty styles
@@ -85,12 +85,11 @@ body {
     @media only screen and (min-width: 540px) {
       .navbar-container .mobile-nav-toggler-container {
         display: none; } }
-  @media only screen and (min-width: 540px) {
-    .navbar-container {
-      display: flex; } }
   .navbar-container .navbar {
     display: block;
-    padding: 0; }
+    height: 100vh;
+    padding: 0;
+    width: 100%; }
     @media only screen and (min-width: 540px) {
       .navbar-container .navbar.hidden {
         display: flex !important;
@@ -100,16 +99,18 @@ body {
       border-top: 1px solid #ffffff;
       position: relative; }
       .navbar-container .navbar .menu-item a {
+        font-family: "Roboto Bold";
+        font-size: 1rem;
         padding-left: 1em; }
+        .navbar-container .navbar .menu-item a:hover {
+          color: #000000;
+          text-decoration: none; }
         @media only screen and (min-width: 540px) {
           .navbar-container .navbar .menu-item a {
             padding-left: 0; } }
       @media only screen and (min-width: 540px) {
         .navbar-container .navbar .menu-item {
-          border-top: 0;
-          margin-left: 0.5em; }
-          .navbar-container .navbar .menu-item:first-of-type {
-            margin-left: 0; } }
+          border-top: 0; } }
     .navbar-container .navbar .menu-item-has-children {
       position: relative; }
       .navbar-container .navbar .menu-item-has-children .sub-menu {
@@ -121,6 +122,8 @@ body {
           padding-bottom: 0; }
         @media only screen and (min-width: 540px) {
           .navbar-container .navbar .menu-item-has-children .sub-menu {
+            border: 2px solid #000000;
+            border-top: 0;
             margin-top: 3px;
             max-width: 150px;
             padding: 0 1em;
@@ -143,6 +146,40 @@ body {
     .navbar-container .navbar .opened-dropdown::before {
       top: 15px;
       transform: rotateX(180deg); }
+    @media only screen and (min-width: 540px) {
+      .navbar-container .navbar {
+        height: 100%; } }
+  @media only screen and (min-width: 540px) {
+    .navbar-container {
+      display: flex; } }
+
+/*
+*   Description: Footer menu styling
+*/
+footer {
+  background-color: #000000; }
+  footer .footer {
+    display: block;
+    margin: 0;
+    padding: .5em 0; }
+    footer .footer .menu-item {
+      margin: 1em 0;
+      text-align: center; }
+      footer .footer .menu-item:first-of-type {
+        margin-top: 0; }
+      footer .footer .menu-item:last-of-type {
+        margin-bottom: 0; }
+      footer .footer .menu-item a {
+        color: #ffffff; }
+        footer .footer .menu-item a:hover {
+          color: #ffffff;
+          text-decoration: underline; }
+      @media only screen and (min-width: 540px) {
+        footer .footer .menu-item {
+          text-align: left; } }
+    @media only screen and (min-width: 540px) {
+      footer .footer {
+        padding: .5em 1em; } }
 
 /*!
  * Bootstrap v5.0.0-beta3 (https://getbootstrap.com/)

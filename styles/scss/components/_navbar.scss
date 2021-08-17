@@ -31,13 +31,11 @@
         }
     }
 
-    @media only screen and (min-width: $tablet) {
-        display: flex;
-    }
-
     .navbar {
         display: block;
+        height: 100vh;
         padding: 0;
+        width: 100%;
 
         @media only screen and (min-width: $tablet) {
             &.hidden {
@@ -54,7 +52,14 @@
             position: relative;
 
             a {
+                font-family: $heading-font;
+                font-size: $font-size-md;
                 padding-left: 1em;
+
+                &:hover {
+                    color: $body-color;
+                    text-decoration: none;
+                }
                 
                 @media only screen and (min-width: $tablet) {
                     padding-left: 0;
@@ -63,11 +68,6 @@
 
             @media only screen and (min-width: $tablet) {
                 border-top: 0;
-                margin-left: 1em;
-
-                &:first-of-type {
-                    margin-left: 0;
-                }
             }
         }
     
@@ -86,6 +86,8 @@
                 }
 
                 @media only screen and (min-width: $tablet) {
+                    border: $nav-bar-sub-border;
+                    border-top: 0;
                     margin-top: 3px;
                     max-width: 150px;
                     padding: 0 1em;
@@ -121,5 +123,13 @@
             top: 15px;
             transform: rotateX(180deg);
         }
+
+        @media only screen and (min-width: $tablet) {
+            height: 100%;
+        }
+    }
+
+    @media only screen and (min-width: $tablet) {
+        display: flex;
     }
 }

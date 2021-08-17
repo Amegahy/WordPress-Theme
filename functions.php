@@ -2,7 +2,7 @@
 
 function load_stylesheets(){
     /* Format ('name of stylesheet', URL of the file, array(dependent stylesheets), version number, 'medai screen to work on) */
-    wp_register_style('stylesheet', get_template_directory_uri().'/styles/index.css', array(), false, 'all');
+    wp_register_style('stylesheet', get_template_directory_uri().'/style.css', array(), false, 'all');
     wp_enqueue_style('stylesheet');
 }
 
@@ -23,6 +23,7 @@ add_theme_support('post-thumbnails');
 register_nav_menus(
     array(
         'top-menu' => __('Top Menu', 'theme'),
+        'footer' => __('Footer', 'theme'),
     )
 );
 
